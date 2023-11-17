@@ -1,0 +1,2915 @@
+ 1142  cat bash.sh 
+ 1143  cat bash.sh | grep -vE "#"
+ 1144  clear
+ 1145  cat bash.sh | grep -vE "#"
+ 1146  cat bash.sh | grep -vE "#" > bash.sh
+ 1147  ls
+ 1148  ./bash.sh 
+ 1149  ls
+ 1150  vim bash.sh 
+ 1151  ls
+ 1152  vim bash.sh 
+ 1153  bash bash.sh 
+ 1154  jq '. | length' logs.json
+ 1155  jq '. | length' logs.json
+ 1156  clear
+ 1157  jq -s 'map(length) | add' logs.json
+ 1158  ls
+ 1159  so-elasticsearch-query .ds-logs-soc-so-*/_count -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1160  so-elasticsearch-query .ds-logs-soc-so-*/_count
+ 1161  ls
+ 1162  cat bash.sh 
+ 1163  clear
+ 1164  so-elasticsearch-query .ds-logs-soc-so-*/_count
+ 1165  jq -s 'map(length) | add' logs.json
+ 1166  ls
+ 1167  vim bash.sh 
+ 1168  bash bash.sh 
+ 1169  jq -s 'map(length) | add' logs.json
+ 1170  ls
+ 1171  cat bash.sh 
+ 1172  ls
+ 1173  vim bash.sh 
+ 1174  vim bash.sh 
+ 1175  bash bash.sh 
+ 1176  ls
+ 1177  jq -s 'map(length) | add' logs.json
+ 1178  rm -rf logs.json 
+ 1179  clear
+ 1180  vim bash.sh 
+ 1181  ./bash.sh 
+ 1182  ls
+ 1183  cat bash.sh 
+ 1184  scroll_id=$(echo $SO_ELASTICSEARCH_QUERY ".ds-logs-soc-so-*/_search?scroll=10m" -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq -r '.["_scroll_id"]')
+ 1185  scroll_id=$(echo $SO_ELASTICSEARCH_QUERY ".ds-logs-soc-so-*/_search?scroll=10m" -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq 
+ 1186  clear
+ 1187  SO_ELASTICSEARCH_QUERY="/usr/sbin/so-elasticsearch-query"
+ 1188  scroll_id=$(echo $SO_ELASTICSEARCH_QUERY ".ds-logs-soc-so-*/_search?scroll=10m" -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1189  scroll_id=$(echo $SO_ELASTICSEARCH_QUERY ".ds-logs-soc-so-*/_search?scroll=10m" -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'| jq -r '.["_scroll_id"]')
+ 1190  ls
+ 1191  vim test.sh 
+ 1192  bash test.sh 
+ 1193  vim test.sh 
+ 1194  bash test.sh 
+ 1195  bash test.sh 
+ 1196  ls
+ 1197  vim test.sh 
+ 1198  bash test.sh 
+ 1199  vim test.sh 
+ 1200  /usr/sbin/so-elasticsearch-query
+ 1201  vim test.sh 
+ 1202  /usr/sbin/so-elasticsearch-query
+ 1203  vim test.sh 
+ 1204  SO_ELASTICSEARCH_QUERY="/usr/sbin/so-elasticsearch-query"
+ 1205  OUTPUT_FILE="logs.txt"
+ 1206  scroll_id=$(echo $SO_ELASTICSEARCH_QUERY ".ds-logs-soc-so-*/_search?scroll=10m" -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll_id
+ 1207  vim test.sh 
+ 1208  bash test.sh 
+ 1209  chmod +x test.sh 
+ 1210  ./test.sh 
+ 1211  cat test.sh 
+ 1212  ls
+ 1213  vim test.sh 
+ 1214  ./test.sh 
+ 1215  ls
+ 1216  cat bash.sh 
+ 1217  ls
+ 1218  vim bash.sh 
+ 1219  vim test.sh 
+ 1220  ./test.sh 
+ 1221  vim test.sh 
+ 1222  ./test.sh 
+ 1223  vim test.sh 
+ 1224  ./test.sh 
+ 1225  vim test.sh 
+ 1226  vim test.sh 
+ 1227  ./test.sh 
+ 1228  vim test.sh 
+ 1229  ./test.sh 
+ 1230  vim test.sh 
+ 1231  ./test.sh 
+ 1232  vim test.sh 
+ 1233  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll
+ 1234  vim test.sh 
+ 1235  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll
+ 1236  ./test.sh 
+ 1237  vim test.sh 
+ 1238  ./test.sh 
+ 1239  ./test.sh | grep scroll
+ 1240  ./test.sh | grep scroll_id
+ 1241  clear
+ 1242  ls
+ 1243  ls
+ 1244  vim bash.sh 
+ 1245  vim test.sh 
+ 1246  ./test.sh 
+ 1247  ls
+ 1248  vim test.sh 
+ 1249  ./test.sh 
+ 1250  ls
+ 1251  vim test.sh 
+ 1252  ./test.sh 
+ 1253  ls
+ 1254  vim test.sh 
+ 1255  clear
+ 1256  ls
+ 1257  cat test.sh 
+ 1258  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq
+ 1259  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq -r '.hits.hits[]
+ 1260  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq -r '.hits.hits[]'
+ 1261  ls
+ 1262  vim test.sh 
+ 1263  vim test.sh 
+ 1264  ./test.sh 
+ 1265  vim test.sh 
+ 1266  ./test.sh 
+ 1267  vim test.sh 
+ 1268  so-elasticsearch-query /_search/scroll
+ 1269  so-elasticsearch-query _search/scroll 
+ 1270  so-elasticsearch-query _search/scroll 
+ 1271  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq
+ 1272  so-elasticsearch-query _search/scroll 
+ 1273  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll
+ 1274  so-elasticsearch-query .ds-logs-soc-so-*/_search?/scroll -d'
+{
+  "scroll": "10m"
+  "scroll_id": "FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACqyRZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B"
+}' | jq
+ 1275  so-elasticsearch-query .ds-logs-soc-so-*/_search?/scroll -d'
+{
+  "scroll": "10m"
+  "scroll_id": "FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACqyRZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B"
+}'
+ 1276  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jqso-elasticsearch-query /_search?/scroll -d'
+{
+  "scroll": "10m"
+  "scroll_id": "FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACqyRZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B"
+}'
+ 1277  so-elasticsearch-query _search?/scroll -d'
+{
+  "scroll": "10m"
+  "scroll_id": "FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACqyRZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B"
+}'
+ 1278   so-elasticsearch-query _search
+ 1279   so-elasticsearch-query _search
+ 1280   so-elasticsearch-query _search/scroll
+ 1281  clear
+ 1282   so-elasticsearch-query _search/scroll
+ 1283   so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACqyRZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B
+ 1284   so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACqyRZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B
+ 1285   so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACqyRZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B
+ 1286  clear
+ 1287   so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACqyRZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B
+ 1288  clear
+ 1289  ls
+ 1290  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq| grep scroll_id
+ 1291  so-elasticsearch-query /_search?/scroll -d'
+{
+  "scroll": "10m"
+  "scroll_id": "FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACsohZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B"
+}' | grep scroll_id
+ 1292  so-elasticsearch-query /_search?/scroll -d'
+{
+  "scroll": "10m"
+  "scroll_id": "FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACsohZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B"
+}' 
+ 1293  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq
+ 1294  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll_id
+ 1295   so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACqyRZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1Bso-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACqyRZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B
+ 1296  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll_id
+ 1297  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACtMhZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B
+ 1298  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACtMhZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B
+ 1299  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll_id
+ 1300  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACtVhZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B | grep scroll_id
+ 1301  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll_id
+ 1302  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACtVhZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B | jq
+ 1303  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll_id
+ 1304  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACtlhZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B | grep jq
+ 1305  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACtlhZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B | grep jq
+ 1306  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACtlhZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B | jq
+ 1307  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll_id
+ 1308  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACtlhZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B | jq
+ 1309  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll_id
+ 1310  clear
+ 1311  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll_id
+ 1312  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACuHhZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B
+ 1313  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll_id
+ 1314  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACuQBZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B | jq
+ 1315  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll_id
+ 1316  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACudBZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B | jq | grep scroll
+ 1317  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACudBZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B | jq | grep scroll
+ 1318  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll_id
+ 1319  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACulBZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B | jq >> test
+ 1320  cat test
+ 1321  cat test | grep scroll
+ 1322  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll_id
+ 1323  so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACvEhZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B?scroll=1m | jq >> test1
+ 1324  ls
+ 1325  cat test1 
+ 1326  cat test1  | grep scroll
+ 1327  ls
+ 1328  vim bash.sh 
+ 1329  vim bash.sh 
+ 1330  ./bash.sh 
+ 1331  vim bash.sh 
+ 1332  vim bash.sh 
+ 1333  ./bash.sh 
+ 1334  ls
+ 1335  vim bash.sh 
+ 1336  vim test
+ 1337  vim test.sh 
+ 1338  ./test.sh 
+ 1339  ls
+ 1340  vim test
+ 1341  ./test.sh 
+ 1342  ls
+ 1343  rm -rf test test1
+ 1344  vim test.sh 
+ 1345  ./test.sh 
+ 1346  ls
+ 1347  vim test.sh 
+ 1348  ./test.sh 
+ 1349  vim test.sh 
+ 1350  ./test.sh 
+ 1351  vim test.sh 
+ 1352  ./test.sh 
+ 1353  vim test.sh 
+ 1354  ./test.sh 
+ 1355  vim test.sh 
+ 1356  ./test.sh 
+ 1357  vim test.sh 
+ 1358  cat bash.sh 
+ 1359  vim test.sh 
+ 1360  ./test.sh 
+ 1361  vim test.sh 
+ 1362  vim test.sh 
+ 1363  vim test.sh 
+ 1364  ./test.sh 
+ 1365  vim test.sh 
+ 1366  ./test.sh 
+ 1367  vim test.sh 
+ 1368  ./test.sh 
+ 1369  vim test.sh 
+ 1370  ./test.sh 
+ 1371  vim test.sh 
+ 1372  ./test.sh 
+ 1373  vim test.sh 
+ 1374  ./test.sh 
+ 1375  vim test.sh 
+ 1376  ./test.sh 
+ 1377  ls
+ 1378  vim test.sh 
+ 1379  vim bash.sh 
+ 1380  vim bash.sh 
+ 1381  vim test.sh 
+ 1382  ./test.sh 
+ 1383  ls
+ 1384  vim test.sh 
+ 1385  ./test.sh 
+ 1386  vim test.sh 
+ 1387  SO_ELASTICSEARCH_QUERY="/usr/sbin/so-elasticsearch-query"
+ 1388  OUTPUT_FILE="logs.txt"
+ 1389  scroll_id=$($SO_ELASTICSEARCH_QUERY ".ds-logs-soc-so-*/_search?scroll=1m" -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq)
+ 1390  echo $scroll_id
+ 1391  ls
+ 1392  (echo $SO_ELASTICSEARCH_QUERY '.ds-logs-soc-so-*/_search?scroll=10m' -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq -r '.["_scroll_id"]')
+ 1393  $SO_ELASTICSEARCH_QUERY '.ds-logs-soc-so-*/_search?scroll=10m' -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq -r '.["_scroll_id"]'
+ 1394  $SO_ELASTICSEARCH_QUERY '.ds-logs-soc-so-*/_search?scroll=10m' -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq -r '.["_scroll_id"]'
+ 1395  ls
+ 1396  vim test.sh 
+ 1397  ./test.sh 
+ 1398  vim test.sh 
+ 1399  $SO_ELASTICSEARCH_QUERY '.ds-logs-soc-so-*/_search?scroll=10m' -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq -r '.["_scroll_id"]'
+ 1400  vim test.sh 
+ 1401  ./test.sh 
+ 1402  vim test.sh 
+ 1403  ./test.sh 
+ 1404  vim test.sh 
+ 1405  ./test.sh 
+ 1406  vim test.sh 
+ 1407  ./test.sh 
+ 1408  vim test.sh 
+ 1409  ./test.sh 
+ 1410  ls
+ 1411  vim test.sh 
+ 1412  vim bash.sh 
+ 1413  ./bash.sh 
+ 1414  vim bash.sh 
+ 1415  ./bash.sh 
+ 1416  vim bash.sh 
+ 1417  ./bash.sh 
+ 1418  vim bash.sh 
+ 1419  ./bash.sh 
+ 1420  vim bash.sh 
+ 1421  ./bash.sh 
+ 1422  vim bash.sh 
+ 1423  vim bash.sh 
+ 1424  ./bash.sh 
+ 1425  vim bash.sh 
+ 1426  ./bash.sh 
+ 1427  vim bash.sh 
+ 1428  ./bash.sh 
+ 1429  vim bash.sh 
+ 1430  ./test.sh 
+ 1431  vim bash.sh 
+ 1432  vim bash.sh 
+ 1433  ./bash.sh 
+ 1434  clear
+ 1435  ./bash.sh 
+ 1436  ./bash.sh 
+ 1437  ./bash.sh 
+ 1438  ls
+ 1439  vim bash.sh 
+ 1440  ./bash.sh 
+ 1441  ls
+ 1442  vim bash.sh 
+ 1443  vim ~/.vimrc
+ 1444  vim ~/.vimrc
+ 1445  vim bash.sh 
+ 1446  ./bash.sh 
+ 1447  ls
+ 1448  cat logs.txt 
+ 1449  ls
+ 1450  rm -rf logs.txt 
+ 1451  vim bash.sh 
+ 1452  clear
+ 1453  ./bash.sh 
+ 1454  history | grep map
+ 1455  jq -s 'map(length) | add' logs.json
+ 1456  jq -s 'map(length) | add' logs.txt 
+ 1457  ls
+ 1458  vim bash.sh 
+ 1459  clear
+ 1460  ls
+ 1461  ./bash.sh 
+ 1462  ls
+ 1463  jq -s 'map(length) | add' logs.json
+ 1464  cat logs.
+ 1465  cat logs.json 
+ 1466  clear
+ 1467  ls
+ 1468  cat logs.json 
+ 1469  clear
+ 1470  ls
+ 1471  cat bash.sh 
+ 1472  ./bash.sh 
+ 1473  ls
+ 1474  vim bash.sh 
+ 1475  lls
+ 1476  ls
+ 1477  vim bash.sh 
+ 1478  ls
+ 1479  rm -rf logs.json logs.txt test.sh 
+ 1480  ls
+ 1481  cp bash.sh back.sh
+ 1482  vim ba
+ 1483  vim bash.sh 
+ 1484  ./ba
+ 1485  ./bash.sh 
+ 1486  ls
+ 1487  vim bash.sh 
+ 1488  cp back.sh bash.sh 
+ 1489  ./ba
+ 1490  ./bash.sh 
+ 1491  vim back.sh 
+ 1492  ls
+ 1493  rm -rf bash.sh 
+ 1494  mv back.sh bash.sh
+ 1495  ./bash.sh 
+ 1496  ls
+ 1497  jq length "$OUTPUT_FILE"
+ 1498  jq length logs.json 
+ 1499  cat logs.json 
+ 1500  ls
+ 1501  vim bash.sh 
+ 1502  ./bash.sh 
+ 1503  ls
+ 1504  vim bash.sh 
+ 1505  ./bash.sh 
+ 1506  ls
+ 1507  vim bash.sh 
+ 1508  rm -rf logs.json 
+ 1509  ./bash.sh 
+ 1510  vim bash.sh 
+ 1511  ls
+ 1512  rm -rf logs.json 
+ 1513  ./bash.sh 
+ 1514  ls
+ 1515  vim bash.sh 
+ 1516  ./bash.sh 
+ 1517  ls
+ 1518  jq length logs.json 
+ 1519  rm -rf logs.json 
+ 1520  ./bash.sh 
+ 1521  cat logs.json 
+ 1522  ls
+ 1523  vim bash.sh 
+ 1524  ls
+ 1525  rm -rf logs.json 
+ 1526  ./bash.sh 
+ 1527  cat logs.json 
+ 1528  ./bash.sh 
+ 1529  ls
+ 1530  vim bash.sh 
+ 1531  rm -rf logs.json 
+ 1532  ./bash.sh 
+ 1533  jq length logs.json 
+ 1534  ls
+ 1535  cat logs.json 
+ 1536  clear
+ 1537  history | grep map
+ 1538  jq -s 'map(length) | add' logs.json
+ 1539  ls
+ 1540  jq -s 'map(length) | add' logs.json
+ 1541  ls
+ 1542  cat bash.sh 
+ 1543  clear
+ 1544  ls
+ 1545  vim bash.sh 
+ 1546  ./bash.sh 
+ 1547  ls
+ 1548  vim bash.sh 
+ 1549  ./bash.sh 
+ 1550  ls
+ 1551  rm -rf logs.json 
+ 1552  ./bash.sh 
+ 1553  cat logs.json 
+ 1554  clear
+ 1555  jq -s 'map(length) | add' logs.json
+ 1556  ls
+ 1557  vim bash.sh 
+ 1558  ls
+ 1559  cat logs.json | jq 'length' | tr -d '[:space:]'
+ 1560  jq length logs.json 
+ 1561  ls
+ 1562  rm -rf logs.json 
+ 1563  ./bash.sh 
+ 1564  jq length logs.json 
+ 1565  jq length logs.json 
+ 1566  jq length logs.json 
+ 1567  ls
+ 1568  vim bash.sh 
+ 1569  rm -rf logs.json 
+ 1570  ./bash.sh 
+ 1571  jq length logs.json 
+ 1572  vim bash.sh 
+ 1573  ./bash.sh 
+ 1574  jq length logs.json 
+ 1575  clear
+ 1576  ls
+ 1577  cat bash.sh 
+ 1578  clear
+ 1579  ls
+ 1580  ls
+ 1581  vim bash.sh 
+ 1582  ./bash.sh 
+ 1583  ls
+ 1584  jq length logs.json 
+ 1585  ls
+ 1586  rm -rf logs.json 
+ 1587  ./bash.sh 
+ 1588  jq length logs.json 
+ 1589  ls
+ 1590  vim bash.sh 
+ 1591  rm -rf logs.json 
+ 1592  ./bash.sh 
+ 1593  ls
+ 1594  cat logs.json 
+ 1595  vim bash.sh 
+ 1596  ls
+ 1597  cat bash.sh 
+ 1598  ls
+ 1599  ls
+ 1600  vim bash.sh 
+ 1601  ./bash.sh 
+ 1602  cat logs.json 
+ 1603  jq length logs.json 
+ 1604  history 
+ 1605  history  | grep map
+ 1606  jq -s 'map(length) | add' logs.json
+ 1607  jq -s 'map(length) | add' logs.json
+ 1608  ls
+ 1609  vim bash.sh 
+ 1610  rm -rf logs.json 
+ 1611  ./bash.sh 
+ 1612  jq -s 'map(length) | add' logs.json
+ 1613  ls
+ 1614  jq -s 'map(length) | add' logs.json
+ 1615  rm -rf logs.json 
+ 1616  ./bash.sh 
+ 1617  jq -s 'map(length) | add' logs.json
+ 1618  ls
+ 1619  vim bash.sh 
+ 1620  jq length logs.json 
+ 1621  clear
+ 1622  ls
+ 1623  vim bash.sh 
+ 1624  ./bash.sh 
+ 1625  jq length logs.json 
+ 1626  jq -s 'map(length) | add' logs.json
+ 1627  ls
+ 1628  vim bash.sh 
+ 1629  ./bash.sh 
+ 1630  jq length logs.json 
+ 1631  jq -s 'map(length) | add' logs.json
+ 1632  ls
+ 1633  vim bash.sh 
+ 1634  jq -s 'map(length) | add' logs.json
+ 1635  vim bash.sh 
+ 1636  ./bash.sh 
+ 1637  jq -s 'map(length) | add' logs.json
+ 1638  cat logs.json 
+ 1639  ls
+ 1640  vim bash.sh 
+ 1641  ./bash.sh 
+ 1642  cat logs.json 
+ 1643  jq -s 'map(length) | add' logs.json
+ 1644  ls
+ 1645  vim bash.sh 
+ 1646  cat logs.json 
+ 1647  jq length logs.json 
+ 1648  ls
+ 1649  rm -rf logs.json 
+ 1650  ./bash.sh 
+ 1651  cat logs.json 
+ 1652  jq length logs.json 
+ 1653  ls
+ 1654  vim bash.sh 
+ 1655  ls
+ 1656  ./bash.sh 
+ 1657  cat logs.json 
+ 1658  ls
+ 1659  vim bash.sh 
+ 1660  ./bash.sh 
+ 1661  jq length logs.json 
+ 1662  vim bash.sh 
+ 1663  ./bash.sh 
+ 1664  ls
+ 1665  cat logs.json 
+ 1666  jq length logs.json 
+ 1667  jq -s 'map(length) | add' logs.json
+ 1668  ls
+ 1669  ls
+ 1670  cat bash.sh 
+ 1671  ls
+ 1672  rm -rf logs.json 
+ 1673  vim bash.sh 
+ 1674  ./bash.sh 
+ 1675  ls
+ 1676  vim bash.sh 
+ 1677  rm -rf logs.json 
+ 1678  touch logs.json
+ 1679  vim bash.sh 
+ 1680  ./bash.sh 
+ 1681  ls
+ 1682  cat logs.json 
+ 1683  vim bash.sh 
+ 1684  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=1m -d'
+{
+  @logs.json
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1685  ls
+ 1686  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=1m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1687  clear
+ 1688  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=1m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' --data-binary @logs.json
+ 1689  ls
+ 1690  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=1m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' -d @logs.json
+ 1691  so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll?pretty=1m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1692  so-elasticsearch-query .ds-logs-soc-so-*/_search?pretty -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1693  so-elasticsearch-query .ds-logs-soc-so-*/_search?pretty?scroll=1m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1694  so-elasticsearch-query .ds-logs-soc-so-*/_search?pret&y?scroll=1m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1695  so-elasticsearch-query .ds-logs-soc-so-*/_search?prety&scroll=1m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1696  so-elasticsearch-query .ds-logs-soc-so-*/_search?prety|scroll=1m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1697  so-elasticsearch-query .ds-logs-soc-so-*/_search?pretty&scroll=1m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1698  clear
+ 1699  so-elasticsearch-query .ds-logs-soc-so-*/_search?pretty&scroll=1m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1700  so-elasticsearch-query .ds?logs-soc-so-*/_search?pretty&scroll=1m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1701  so-elasticsearch-query .ds?logs-soc-so-*/_search?pretty&scroll=1m -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1702  ckear
+ 1703  clear
+ 1704  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1705  clear
+ 1706  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1707  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq
+ 1708  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep scroll
+ 1709  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 100,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq length 
+ 1710  ls
+ 1711  rm -rf logs.json 
+ 1712  vim bash.sh 
+ 1713  ls
+ 1714  ./bash.sh 
+ 1715  ls
+ 1716  vim bash.sh 
+ 1717  ./bash.sh 
+ 1718  vim bash.sh 
+ 1719  ./bash.sh 
+ 1720  ls
+ 1721  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 100,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1722  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1723  clear
+ 1724  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1725  ls
+ 1726  clear
+ 1727  vim py.py
+ 1728  ls
+ 1729  vim py.py 
+ 1730  ls
+ 1731  rm -rf py.py 
+ 1732  vim bash.sh 
+ 1733  ls
+ 1734  vim data.py
+ 1735  ls
+ 1736  vim data.py 
+ 1737  python3 data.py 
+ 1738  ls
+ 1739  vim data.py 
+ 1740  python3 data.py 
+ 1741  ls
+ 1742  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1743  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1744  clear
+ 1745  ls
+ 1746  vim bash.sh 
+ 1747  vim bash.sh 
+ 1748  ./bash.sh 
+ 1749  vim bash.sh 
+ 1750  vim bash.sh 
+ 1751  ls
+ 1752  rm -rf data.json 
+ 1753  ./bash.sh 
+ 1754  ls
+ 1755  cat bash.sh 
+ 1756  vim bash.sh 
+ 1757  ls
+ 1758  ./bash.sh 
+ 1759  vim bash.sh 
+ 1760  ./bash.sh 
+ 1761  ls
+ 1762  rm -rf logs.json 
+ 1763  ./bash.sh 
+ 1764  ls
+ 1765  cat logs.json 
+ 1766  ls
+ 1767  vim bash.sh 
+ 1768  ./bash.sh 
+ 1769  ls
+ 1770  vim bash.sh 
+ 1771  ./bash.sh 
+ 1772  ls
+ 1773  vim bash.sh 
+ 1774  ./bash.sh 
+ 1775  vim bash.sh 
+ 1776  ./bash.sh 
+ 1777  ls
+ 1778  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' > log.json
+ 1779  rm -rf log*
+ 1780  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' > logs.json
+ 1781  ls -al
+ 1782  ls
+ 1783  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' > logs.json
+ 1784  ls
+ 1785  ls -al
+ 1786  ls -alh
+ 1787  ls
+ 1788  vim bash.sh 
+ 1789  ./bash.sh 
+ 1790  ls
+ 1791  vim bash.sh 
+ 1792  vim bash.sh 
+ 1793  ./bash.sh 
+ 1794  ls
+ 1795  vim bash.sh 
+ 1796  ./bash.sh 
+ 1797  ls
+ 1798  cat logs.json 
+ 1799  ftp 10.11.1.2 
+ 1800  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1801  clear
+ 1802  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1803  ls
+ 1804  cat logs.json 
+ 1805  cat logs.json  | grep remoteAddr
+ 1806  cat logs.json  | grep remoteAddr
+ 1807  ls
+ 1808  vim bash.sh 
+ 1809  clear
+ 1810  ls
+ 1811  cat logs.json 
+ 1812  clear
+ 1813  ls
+ 1814  tail -n 10 cat logs.json 
+ 1815  tail -n 10 logs.json 
+ 1816  tail -n 100 logs.json 
+ 1817  tail -n 200 logs.json 
+ 1818  cat logs.json 
+ 1819  cat logs.json  | grep contentType
+ 1820  cat logs.json  | grep response
+ 1821  cat logs.json  | grep contentType
+ 1822  cat logs.json  | grep text/html
+ 1823  cat logs.json  | grep MIME
+ 1824  cat logs.json  | grep http
+ 1825  clear
+ 1826  ls
+ 1827  ls
+ 1828  vim bash.sh 
+ 1829  ls
+ 1830  vim bash.sh 
+ 1831  ./bash.sh 
+ 1832  ls
+ 1833  ls -alh
+ 1834  cat logs.json 
+ 1835  cat logs.json  | grep http
+ 1836  cat logs.json  | grep http
+ 1837  ls -alh
+ 1838  ls
+ 1839  vim bash.sh 
+ 1840  ./bash.sh 
+ 1841  ls
+ 1842  ls -alh
+ 1843  ls
+ 1844  vim bash.sh 
+ 1845  ./bash.sh 
+ 1846  ls -alh
+ 1847  df -h
+ 1848  ls
+ 1849  rm -rf logs.json 
+ 1850  ./bash.sh 
+ 1851  ls -alh
+ 1852  cat logs.json 
+ 1853  vim bash.sh 
+ 1854  ./bash.sh 
+ 1855  ls -ah
+ 1856  ls -ahl
+ 1857  cat logs.json | jq
+ 1858  cat logs.json | jq length
+ 1859  jq length logs.json 
+ 1860  ls
+ 1861  vim bash.sh 
+ 1862  cat bash.sh 
+ 1863  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1864  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1865  clear
+ 1866  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+ 1867  ls
+ 1868  vim bash.sh 
+ 1869  ./bash.sh 
+ 1870  ls -alh
+ 1871  cat logs.json 
+ 1872  ls
+ 1873  vim bash.sh 
+ 1874  ./bash.sh 
+ 1875  ls -alh
+ 1876  cat logs.json 
+ 1877  vim bash.sh 
+ 1878  ./bash.sh 
+ 1879  ls
+ 1880  vim bash.sh 
+ 1881  ./bash.sh 
+ 1882  vim bash.sh 
+ 1883  ls
+ 1884  cat logs.json 
+ 1885  cat logs.json 
+ 1886  cat logs.json  | jq '.hits.hits[0]._source.sensoroni.fields | {contentLength, statusCode, timestamp}'
+ 1887  ls
+ 1888  vim bash.sh 
+ 1889  ./bash.sh 
+ 1890  vim bash.sh 
+ 1891  vim bash.sh 
+ 1892  ./bash.sh 
+ 1893  vim bash.sh 
+ 1894  ./bash.sh 
+ 1895  vim bash.sh 
+ 1896  ./bash.sh 
+ 1897  ls
+ 1898  vim bash.sh 
+ 1899  ./bash.sh 
+ 1900  ls
+ 1901  cat logs.json 
+ 1902  cat logs.json  | grep -v null
+ 1903  ls
+ 1904  vim bash.sh 
+ 1905  ./bash.sh 
+ 1906  cat logs.json 
+ 1907  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq
+ 1908  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep content
+ 1909  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep content
+ 1910  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep elased
+ 1911  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep elap
+ 1912  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq 
+ 1913  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep elap
+ 1914  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq | grep elap
+ 1915  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq 
+ 1916  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq  | grep status
+ 1917  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq  | grep status
+ 1918  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq
+ 1919  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq |grep dns
+ 1920  so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}' | jq |grep dns
+ 1921  so-elasticsearch-query _search
+ 1922  so-elasticsearch-query _cat
+ 1923  so-elasticsearch-query _cat/indices
+ 1924  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1
+ 1925  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1&pretty
+ 1926  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1&pretty | jq
+ 1927  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1 | jq
+ 1928  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1 | jq | grep du
+ 1929  clear
+ 1930  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1 | grep bytes
+ 1931  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1 | grep byt
+ 1932  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1 | grep by
+ 1933  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1 
+ 1934  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1 | jq
+ 1935  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1 | jq | grep packet
+ 1936  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1 | jq | grep by
+ 1937  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1 | jq | grep byyes
+ 1938  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1 | jq | grep du
+ 1939  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=10000 >> data.json
+ 1940  ls
+ 1941  cat data.json 
+ 1942  clear
+ 1943  ls
+ 1944  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=10000 | jq -r '.hits.hits[0]._source.event.duration' >> data.json
+ 1945  cat data.
+ 1946  cat data.json 
+ 1947  cat data.json | jq
+ 1948  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=10000 | jq '.hits.hits[] | {index: ._index, id: ._id, source: ._source}'
+ 1949  ls
+ 1950  cat logs.json 
+ 1951  cat logs.json 
+ 1952  clear
+ 1953  ls
+ 1954  cat logs.json 
+ 1955  clear
+ 1956  ls
+ 1957  rm -rf data.*
+ 1958  ls
+ 1959  rm -rf logs.json 
+ 1960  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=10000 
+ 1961  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=10000  >> data.json
+ 1962  ls
+ 1963  vim data.json 
+ 1964  ls
+ 1965  cat data.json 
+ 1966  clear
+ 1967  ls
+ 1968  cat  data.json
+ 1969  ls -alh
+ 1970  cat data.json 
+ 1971  cat data.json | wc -l
+ 1972  cat data.json | wc
+ 1973  ls
+ 1974  cat data.json 
+ 1975  lear
+ 1976  ls
+ 1977  clear
+ 1978  ls
+ 1979  cat data.json 
+ 1980  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1
+ 1981  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1
+ 1982  so-elasticsearch-query '.ds-logs-zeek-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 1983  so-elasticsearch-query '.ds-logs-zeek-so-*/_count
+ 1984  so-elasticsearch-query '.ds-logs-zeek-so-*/_count'
+ 1985  so-elasticsearch-query '.ds-logs-zeek-so-*/_count' -d '
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 1986  so-elasticsearch-query '.ds-logs-zeek-so-*/_count' -d '
+{
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 1987  so-elasticsearch-query '.ds-logs-zeek-so-*/_count' -d '
+{
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 1988  so-elasticsearch-qsearch'.ds-logs-zeek-so-*/_count' -d '
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 1989  so-elasticsearch-qsearch'.ds-logs-zeek-so-*/_search' -d '
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 1990  so-elasticsearch-qsearch'.ds-logs-zeek-so-*/_search' -d '                {
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 1991  so-elasticsearch-qsearch'.ds-logs-zeek-so-*/_search' -d '                {
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 1992  so-elasticsearch-queary'.ds-logs-zeek-so-*/_search' -d '                {
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 1993  so-elasticsearch-query'.ds-logs-zeek-so-*/_search' -d '                {
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 1994  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1
+ 1995  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1 -d '{
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 1996  so-elasticsearch-query .ds-logs-zeek-so-*/_searc0000h?size=1 -d '{
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 1997  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=1 -d '{
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 1998  clear
+ 1999  so-elasticsearch-query .ds-logs-zeek-so-*/_search -d '{
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 2000  so-elasticsearch-query .ds-logs-zeek-so-*/_search -d '{
+  "size": 1000
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 2001  so-elasticsearch-query .ds-logs-zeek-so-*/_search? -d '{
+  "size": 1000
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 2002  clear
+ 2003  so-elasticsearch-query .ds-logs-zeek-so-*/_search?pretty -d '{
+  "size": 1000
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 2004  so-elasticsearch-query .ds-logs-zeek-so-*/ -d '{
+  "size": 1000
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 2005  so-elasticsearch-query .ds-logs-zeek-so-*/_search?pretty -d '{
+  "size": 1000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 2006  clear
+ 2007  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 2008  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' | grep ssl
+ 2009  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}'
+ 2010  clear
+ 2011  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' | jq
+ 2012  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' | jq
+ 2013  clear
+ 2014  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' | jq
+ 2015  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' | grep ssl:version
+ 2016  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' | grep ssl
+ 2017  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' 
+ 2018  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' | grep ssl
+ 2019  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' | jq
+ 2020  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' | jq | grep ssl
+ 2021  clear
+ 2022  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' | jq | grep proto
+ 2023  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' | jq | grep conn
+ 2024  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' | jq | grep conn_sta
+ 2025  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "ssl" }}
+      ]
+    }
+  }
+}' | jq | grep packet
+ 2026  ls
+ 2027  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "bytes" }}
+      ]
+    }
+  }
+}'
+ 2028  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}'
+ 2029  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}' | grep packets
+ 2030  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}' | grep bytes
+ 2031  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}' | grep proto
+ 2032  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}' | grep conn
+ 2033  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}' | grep conn_s
+ 2034  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}' | jq
+ 2035  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}' | jq
+ 2036  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}' | jq > data.json
+ 2037  cat data.json 
+ 2038  ls
+ 2039  vim csv.py
+ 2040  ls
+ 2041  vim csv.py
+ 2042  python3 csv.py 
+ 2043  pip3 install pandas
+ 2044  ls
+ 2045  ftp 10.11.1.2
+ 2046  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}' | jq > data.json
+ 2047  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}' 
+ 2048  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}' | jq
+ 2049  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}, { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}
+ 2050  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}, 
+	  { "exists": { "field": "packets" }},
+	  { "exists": { "field": "bytes" }},
+	  { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}
+ 2051  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}, 
+	  { "exists": { "field": "packets" }},
+	  { "exists": { "field": "bytes" }},
+	  { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}'
+ 2052  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}, 
+	  { "exists": { "field": "packets" }},
+	  { "exists": { "field": "bytes" }},
+	  { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}' | jq
+ 2053  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}, 
+	  { "exists": { "field": "packets" }},
+	  { "exists": { "field": "bytes" }},
+	  { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}' | jq
+ 2054  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}, 
+	  { "exists": { "field": "packets" }},
+	  { "exists": { "field": "bytes" }},
+	  { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}' | jq >> test.json
+ 2055  ftp 10.11.1.2
+ 2056  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}, 
+	  { "exists": { "field": "packets" }},
+	  { "exists": { "field": "bytes" }},
+	  { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}' | jq -r '.hits.hits[0]._source | {
+  timestamp: ."@timestamp",
+  ip_source: .client.ip,
+  port_source: .source.port,
+  ip_destination: .destination.ip,
+  port_destination: .destination.port,
+  packets: .client.packets,
+  bytes: .network.bytes,
+  proto: .message.proto,
+  conn_state: .connection.state
+}' data.json
+ 2057  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}, 
+	  { "exists": { "field": "packets" }},
+	  { "exists": { "field": "bytes" }},
+	  { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}' | jq -r '.hits.hits[0]._source | {
+  timestamp: ."@timestamp",
+  ip_source: .client.ip,
+  port_source: .source.port,
+  ip_destination: .destination.ip,
+  port_destination: .destination.port,
+  packets: .client.packets,
+  bytes: .network.bytes,
+  conn_state: .connection.state
+}' data.json
+ 2058  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}, 
+	  { "exists": { "field": "packets" }},
+	  { "exists": { "field": "bytes" }},
+	  { "exists": { "field": "bytes" }},{ "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}' | jq >> test.json
+ 2059  ls
+ 2060  jq -r '.hits.hits[0]._source | {
+  timestamp: ."@timestamp",
+  ip_source: .client.ip,
+  port_source: .source.port,
+  ip_destination: .destination.ip,
+  port_destination: .destination.port,
+  packets: .client.packets,
+  bytes: .network.bytes,
+  proto: .message.proto,
+  conn_state: .connection.state
+}' data.json
+ 2061  jq -r '.hits.hits[0]._source | {
+  timestamp: ."@timestamp",
+  ip_source: .client.ip,
+  port_source: .source.port,
+  ip_destination: .destination.ip,
+  port_destination: .destination.port,
+  packets: .client.packets,
+  bytes: .network.bytes,
+  conn_state: .connection.state
+}' data.json
+ 2062  jq -r '.hits.hits[1]._source | {
+  timestamp: ."@timestamp",
+  ip_source: .client.ip,
+  port_source: .source.port,
+  ip_destination: .destination.ip,
+  port_destination: .destination.port,
+  packets: .client.packets,
+  bytes: .network.bytes,
+  conn_state: .connection.state
+}' data.json
+ 2063  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}, 
+	  { "exists": { "field": "packets" }},
+	  { "exists": { "field": "bytes" }},
+	  { "exists": { "field": "bytes" }},{ "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}' | jq > test.json
+ 2064  jq -r '.hits.hits[1]._source | {
+  timestamp: ."@timestamp",
+  ip_source: .client.ip,
+  port_source: .source.port,
+  ip_destination: .destination.ip,
+  port_destination: .destination.port,
+  packets: .client.packets,
+  bytes: .network.bytes,
+  conn_state: .connection.state
+}' data.json
+ 2065  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must": [
+        { "exists": { "field": "timestamp" }},
+        { "script": {
+            "script": "doc['timestamp'].value != null && doc['timestamp'].value != \"\""
+          }
+        }
+      ],
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}'
+ 2066  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must": [
+        { "exists": { "field": "timestamp" }},
+        { "script": {
+            "script": "doc['timestamp'].value != null && doc['timestamp'].value != \"\""
+          }
+        }
+      ],
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}'
+ 2067  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must": [
+        { "exists": { "field": "timestamp" }},
+        { "script": {
+            "script": "doc['timestamp'].value != null && doc['timestamp'].value != null"
+          }
+        }
+      ],
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}'
+ 2068  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must": [
+        { "exists": { "field": "timestamp" }},
+        { "script": {
+            "script": "doc['timestamp'].value != null && doc['timestamp'].value != \"\""
+          }
+        }
+      ],
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+ 2069    "size": 10000,
+ 2070    "query": {
+ 2071      "bool": {
+ 2072        "must": [
+ 2073          { "exists": { "field": "timestamp" }},;         { "script": {;             "script": "doc['timestamp'].value != null ";           };         }
+ 2074        ],
+ 2075        "must_not": [
+ 2076          { "exists": { "field": "packets" }},;         { "exists": { "field": "bytes" }},;         { "exists": { "field": "conn_state" }};       ];     };   }; }''; clear
+ 2077  clear
+ 2078  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must": [
+        { "exists": { "field": "timestamp" }},
+        { "script": {
+            "script": "doc['timestamp'].value != null "
+          }
+        }
+      ],
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}'
+ 2079  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}, 
+	  { "exists": { "field": "packets" }},
+	  { "exists": { "field": "bytes" }},
+	  { "exists": { "field": "bytes" }},{ "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}' | jq > test.jsonso-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "proto" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}'
+ 2080  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "proto" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}'
+ 2081  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "proto" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}'
+ 2082  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "proto" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}'
+ 2083  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "proto" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}'
+ 2084  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "proto" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}' | jq
+ 2085  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "proto" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}' | jq | grep proto
+ 2086  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "proto" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}' | jq | grep packet
+ 2087  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "proto" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}'
+ 2088  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "proto" }},
+        { "exists": { "field": "bytes" }}
+      ]
+    }
+  }
+}'
+ 2089  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must": [
+        { "exists": { "field": "bytes" }}
+      ]
+    }
+  }
+}'
+ 2090  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=100
+ 2091  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=100 | grep bytes
+ 2092  so-elasticsearch-query .ds-logs-zeek-so-*/_search?size=100 -d '{
+  "query": {
+    "exists": {
+      "field": "packets"
+    }
+  },
+  "filter": {
+    "exists": {
+      "field": "proto"
+    }
+  },
+  "filter": {
+    "exists": {
+      "field": "bytes"
+    }
+  },
+  "filter": {
+    "exists": {
+      "field": "conn_state"
+    }
+  }
+}'
+ 2093  clear
+ 2094  ls
+ 2095  rm -rf csv.py bash.sh data.json test.json test.jsonso-elasticsearch-query 
+ 2096  ls
+ 2097  mkdir test
+ 2098  cd test/
+ 2099  ls
+ 2100  curl -XGET "https://securityonion:9200/.ds-logs-zeek-so-*/_search" -H "kbn-xsrf: reporting" -H "Content-Type: application/json" -d'
+{
+  "size": 10000,
+  "query": {
+    "exists": {
+      "field": "connection.state"
+    }
+  },
+  "_source": [
+    "@timestamp", 
+    "connection.state",
+    "source.ip",
+    "source.port",
+    "destination.ip",
+    "destination.port",
+    "network.bytes",
+    "network.protocol"  
+    ]
+}' >> zeek.json
+ 2101  curl -XGET "https://securityonion:9200/.ds-logs-zeek-so-*/_search" -H "kbn-xsrf: reporting" -H "Content-Type: application/json" -d'
+{
+  "size": 10000,
+  "query": {
+    "exists": {
+      "field": "connection.state"
+    }
+  },
+  "_source": [
+    "@timestamp", 
+    "connection.state",
+    "source.ip",
+    "source.port",
+    "destination.ip",
+    "destination.port",
+    "network.bytes",
+    "network.protocol"  
+    ]
+}'
+ 2102  curl -XGET "https://securityonion:9200/.ds-logs-zeek-so-*/_search" -H "kbn-xsrf: reporting" -H "Content-Type: application/json" -d'
+{
+  "size": 10000,
+  "query": {
+    "exists": {
+      "field": "connection.state"
+    }
+  },
+  "_source": [
+    "@timestamp", 
+    "connection.state",
+    "source.ip",
+    "source.port",
+    "destination.ip",
+    "destination.port",
+    "network.bytes",
+    "network.protocol"  
+    ]
+}' --insecure
+ 2103  ls
+ 2104  ls
+ 2105  cat zeek.json 
+ 2106  rm -rf zeek.json 
+ 2107  so-elasticsearch-query .ds-logs-zeek-so-*/_search -d'
+{
+  "size": 10000,
+  "query": {
+    "exists": {
+      "field": "connection.state"
+    }
+  },
+  "_source": [
+    "@timestamp",
+    "connection.state",
+    "source.ip",
+    "source.port",
+    "destination.ip",
+    "destination.port",
+    "network.bytes",
+    "network.protocol"
+  ]
+}'
+ 2108  so-elasticsearch-query .ds-logs-zeek-so-*/_search -d'
+{
+  "size": 10000,
+  "query": {
+    "exists": {
+      "field": "connection.state"
+    }
+  },
+  "_source": [
+    "@timestamp",
+    "connection.state",
+    "source.ip",
+    "source.port",
+    "destination.ip",
+    "destination.port",
+    "network.bytes",
+    "network.protocol"
+  ]
+}' > zeek.json
+ 2109  ls
+ 2110  cat zeek.json 
+ 2111  ls -al
+ 2112  ls -alh
+ 2113  ftp 10.11.1.2
+ 2114  ls
+ 2115  vls
+ 2116  ls
+ 2117  cd ..
+ 2118  ls
+ 2119  vim bash.sh 
+ 2120  ./bash.sh 
+ 2121  vim bash.sh 
+ 2122  ./bash.sh 
+ 2123  vim bash.sh 
+ 2124  vim bash.sh 
+ 2125  ./bash.sh 
+ 2126  cat bash.sh 
+ 2127  curl -XGET "https://securityonion:9200/.ds-logs-zeek-so-*/_search" -H "kbn-xsrf: reporting" -H "Content-Type: application/json" -d'
+{
+  "size": 10000,
+  "query": {
+    "exists": {
+      "field": "connection.state"
+    }
+  },
+  "_source": [
+    "@timestamp", 
+    "connection.state",
+    "source.ip",
+    "source.port",
+    "destination.ip",
+    "destination.port",
+    "network.bytes",
+    "network.protocol"  
+    ]
+}' >> log.json
+ 2128  so-elasticsearch-query .ds-logs-zeek-so-*/_search -d'
+{
+  "size": 10000,
+  "query": {
+    "exists": {
+      "field": "connection.state"
+    }
+  },
+  "_source": [
+    "@timestamp",
+    "connection.state",
+    "source.ip",
+    "source.port",
+    "destination.ip",
+    "destination.port",
+    "network.bytes",
+    "network.protocol"
+  ]
+}' > zeek.json
+ 2129  clear
+ 2130  ls
+ 2131  cat bash.sh 
+ 2132  clear
+ 2133  ls
+ 2134  cat bash.sh 
+ 2135  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '
+{
+  "size": 10000,
+  "query": {
+    "exists": {
+      "field": "connection.state"
+    }
+  },
+  "_source": [
+    "@timestamp",
+    "source.ip",
+    "source.port",
+    "destination.ip",
+    "destination.port"
+  ]
+}' >> log.json
+ 2136  ls
+ 2137  rm -rf log.json 
+ 2138  so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '
+{
+  "size": 10000,
+  "query": {
+    "exists": {
+      "field": "connection.state"
+    }
+  },
+  "_source": [
+    "@timestamp",
+    "source.ip",
+    "source.port",
+    "destination.ip",
+    "destination.port"
+  ]
+}' >> log.json
+ 2139  clear
+ 2140  history 
+ 2141  history  > data

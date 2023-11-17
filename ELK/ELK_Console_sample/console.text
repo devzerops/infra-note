@@ -1,0 +1,83 @@
+GET so-beats-2023.01.07/_search
+
+GET so-beats-2023.01.07/_search
+{
+  "query": {
+    "exists": {
+      "field": "agent"
+    }
+  },
+  "script_fields": {
+    "name": {
+      "script": {
+        "source": "doc['agent.name'].value"
+      }
+    },
+    "id": {
+      "script": {
+        "source": "doc['agent.id'].value"
+      }
+    },
+    "ephemeral_id": {
+      "script": {
+        "source": "doc['agent.ephemeral_id'].value"
+      }
+    },
+    "type": {
+      "script": {
+        "source": "doc['agent.type'].value"
+      }
+    },
+    "version": {
+      "script": {
+        "source": "doc['agent.version'].value"
+      }
+    }
+  }
+}
+GET so-beats-2022.12.*/_search
+
+GET so-beats-2022.12.*/_search
+{
+  "query": {
+    "exists": {
+      "field": "metadata"
+    }
+  },
+  "_source": ["metadata.beat","metadata.ip_address"]
+}
+
+GET so-beats-2022.12.*/_search
+
+GET so-beats-2022.12.*/_search
+{
+  "query": {
+    "exists": {
+      "field": "agent"
+    }
+  },
+  "script_fields": {
+    "name": {
+      "script": {
+        "source": "doc['agent.name'].value"
+      }
+    },
+    "type": {
+      "script": {
+        "source": "doc['agent.type'].value"
+      }
+    }
+  }
+}
+
+GET /books
+PUT books
+DELETE books
+
+GET /_cat/nodes?v&h=ip,name,node.role
+
+GET _cat/indices?v
+
+GET _cat/indices?v&h=health,index,docs
+
+GET _cat/shards/so-beats-2022.12.*

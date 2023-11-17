@@ -1,0 +1,16 @@
+GET .ds-logs-zeek-so-*/_search?scroll=1m
+{
+  "size": 10000,
+  "query": {
+    "exists": {
+      "field": "connection.state"
+    }
+  },
+  "_source": [
+    "@timestamp", 
+    "source.ip",
+    "source.port",
+    "destination.ip",
+    "destination.port"
+    ]
+}

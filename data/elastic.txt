@@ -1,0 +1,136 @@
+so-elasticsearch-query _cat/indices/.ds-logs-soc-so-2023.05.31-000001
+
+
+so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+
+so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}
+      ]
+    }
+  }
+}' | jq '.hits.hits[0]._source.sensoroni.fields | {contentLength, statusCode, timestamp}'
+
+
+so-elasticsearch-query _search/scroll/FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACvEhZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B?scroll=1m | jq >> test
+
+so-elasticsearch-query /_search?/scroll -d'
+{
+  "scroll": "10m"
+  "scroll_id": "FGluY2x1ZGVfY29udGV4dF91dWlkDXF1ZXJ5QW5kRmV0Y2gBFklqbzB4LVd6UlJhS0NhLWdTOTBNOGcAAAAAAACs4BZqYlE0LW5SaVF3dTg5UlU3R0ZBMC1B"
+}' | grep scroll_id
+
+
+so-elasticsearch-query .ds-logs-soc-so-*/_search?scroll=10m -d'
+{
+  "size": 1,
+  "query": {                                                                                               "bool": {
+      "must_n
+
+curl -s -XPOST "http://localhost:9200/.ds-logs-soc-so-*/_search?scroll=10m" -H 'Content-Type: application/json' -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+
+so-elasticsearch-query '.ds-logs-soc-so-*/_search?pretty&scroll=1m' -d'
+{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "elapsedMs" }},
+        { "exists": { "field": "contentLength" }}
+      ]
+    }
+  }
+}'
+
+
+so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 1,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }}, 
+	  { "exists": { "field": "packets" }},
+	  { "exists": { "field": "bytes" }},
+	  { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}
+
+
+so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '
+{
+  "size": 10000,
+  "query": {
+    "exists": {
+      "field": "connection.state"
+    }
+  },
+  "_source": [
+    "@timestamp",
+    "source.ip",
+    "source.port",
+    "destination.ip",
+    "destination.port"
+  ]
+}'
+
+
+so-elasticsearch-query .ds-logs-zeek-so-*/_search?scroll=1m -d '{
+  "size": 10000,
+  "query": {
+    "bool": {
+      "must_not": [
+        { "exists": { "field": "packets" }},
+        { "exists": { "field": "proto" }},
+        { "exists": { "field": "bytes" }},
+        { "exists": { "field": "conn_state" }}
+      ]
+    }
+  }
+}'
+
+curl -XGET "https://securityonion:9200/.ds-logs-zeek-so-*/_search" -H "kbn-xsrf: reporting" -H "Content-Type: application/json" -d'
+{
+  "size": 10,
+  "query": {
+    "exists": {
+      "field": "connection.state"
+    }
+  },
+  "_source": [
+    "connection.state",
+    "source.ip",
+    "source.port",
+    "destination.ip",
+    "destination.port",
+    "network.bytes",
+    "network.protocol"
+  ]
+}'
+

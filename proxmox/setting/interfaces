@@ -1,0 +1,70 @@
+auto lo
+iface lo inet loopback
+
+auto enx00e04c680010
+iface enx00e04c680010 inet manual
+        ovs_type OVSPort
+        ovs_bridge vmbr0
+
+auto enp39s0
+iface enp39s0 inet manual
+        ovs_type OVSPort
+        ovs_bridge vmbr1
+
+auto vlan10
+iface vlan10 inet manual
+        ovs_type OVSIntPort
+        ovs_bridge vmbr2
+        ovs_options tag=10
+
+auto vlan20
+iface vlan20 inet manual
+        ovs_type OVSIntPort
+        ovs_bridge vmbr2
+        ovs_options tag=20
+
+auto vlan30
+iface vlan30 inet manual
+        ovs_type OVSIntPort
+        ovs_bridge vmbr2
+        ovs_options tag=30
+
+auto vlan40
+iface vlan40 inet manual
+        ovs_type OVSIntPort
+        ovs_bridge vmbr2
+        ovs_options tag=40
+
+auto vlan50
+iface vlan50 inet manual
+        ovs_type OVSIntPort
+        ovs_bridge vmbr0
+        ovs_options tag=50
+#honeypot
+
+auto vlan60
+iface vlan60 inet manual
+        ovs_type OVSIntPort
+        ovs_bridge vmbr2
+        ovs_options tag=60
+#SIEM
+
+auto vmbr0
+iface vmbr0 inet static
+        address 192.168.35.250/24
+        gateway 192.168.35.1
+        ovs_type OVSBridge
+        ovs_ports enx00e04c680010 vlan50
+#proxmox
+
+auto vmbr1
+iface vmbr1 inet manual
+        ovs_type OVSBridge
+        ovs_ports enp39s0
+#WAN 
+
+auto vmbr2
+iface vmbr2 inet manual
+        ovs_type OVSBridge
+        ovs_ports vlan10 vlan20 vlan30 vlan40 vlan60
+#LAN
