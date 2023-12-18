@@ -1,0 +1,28 @@
+drop $WEB any -> any 80,443 -> (msg:"DROP File Inclusion Attack!"; flow:to_server,stablished;` content:"GET"; http_method; content:"fi/?page"; http_url; pcre:"/\.+V{1,}/"; sid:20001;rid:1;)
+drop $WEB any -> any 80,443 -> (msg:"DROP File Inclusion Advanced Attack!"; flow:to_server,stablished;` content:"GET"; http_method; content:"fi/?page"; http_url; pcre:"^(\S+ )*\S+ - - \[.*\] "GET .*?\/(.*?\.(php|asp|aspx|jsp)) HTTP\/\d\.\d" 4\d\d
+"; sid:20002;rid:1;)
+
+#DVWA IPS rule 
+drop $WEB any -> any 80,443 -> (msg:"DROP DVWA CSRF Attack!"; content:"csrf/?"; http_uri; content:"low"; http_cookie; content:!"Referer"; http_header; flow:to_server,established;)
+
+
+
+#DVWA IPS sql rule
+drop tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"4. SQL Injection UNION SELECT"; flow:established,to_server; content:"UNION"; nocase; http_uri; content:"SELECT"; nocase; http_uri; pcre:"/UNION.+SELECT/Ui"; sid:3000041; rev:1;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"4. SQL Injection USER in URI"; flow:established,to_server; content:"SELECT"; nocase; http_uri; content:"USER"; nocase; http_uri; pcre:"/SELECT[^a-z].+USER/Ui"; sid:3000042; rev:1;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"4. SQL Injection SLEEP"; flow:established,to_server; content:"SELECT"; nocase; http_uri; content:"SLEEP|28|"; nocase; http_uri; pcre:"/\bSELECT.*?\bSLEEP\x28/Ui"; sid:3000043; rev:1;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"4. SQL Injection INFOMATION SCHEMA"; flow:established,to_server; content:"information_schema"; nocase; http_uri; sid:3000044; rev:1;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"4. SQL Injection SELECT FROM"; flow:established,to_server; content:"SELECT"; nocase; http_uri; content:"FROM"; nocase; http_uri; pcre:"/SELECT\b.*FROM/Ui"; sid:3000045; rev:1;)
+
+#DVWA XSS
+drop tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"5. XSS Injection URI"; flow:established,to_server; content:"</script>"; nocase; http_uri; sid:3000051; rev:1;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"5. XSS Injection POST"; flow:established,to_server; content:"%3c%2fscript%3e"; nocase; http_client_body; sid:3000052; rev:1;)
+
+
+#Path Travel
+drop tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"6. Path Traversal /etc/passwd"; content:"/etc/passwd"; nocase; sid:3000061; rev:1;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"6. Path Traversal Linux"; content:"|2e2e2f2e2e2f|"; sid:3000062; rev:1;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"6. Path Traversal Windows"; content:"|2e2e5c2e2e5c|"; sid:3000063; rev:1;)
+drop tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"6. Path Traversal Windows(c\windows)"; flow:established,to_server; content:"User-Agent|3a| c|3a 5c|"; nocase; http_header; sid:3000064; rev:1;)
+
+#
