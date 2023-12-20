@@ -1,0 +1,4 @@
+drop tcp any any -> 172.20.25.16 80 (msg:"Command Injection detected 1"; content:"ls"; sid: 1000002; rev: 1;)
+drop tcp any any -> 172.20.25.16 80 (msg:"Command Injection detected 2"; content:"whoami"; sid: 1000003; rev: 1;)
+drop tcp any any -> 172.20.25.16 80 (msg:"Command injection detected 3"; content:"cat /etc/passwd"; sid: 1000004; rev: 1;)
+
