@@ -1,3 +1,9 @@
+#
+[awx 설치링크](https://computingforgeeks.com/how-to-install-ansible-awx-on-centos-7/?expand_article=1#google_vignette)
+[ansible forum](https://forum.ansible.com/t/installation-procedure-of-latest-awx-version-23-0-0/992)
+
+
+
 # Infra - Security Onion 
 
 security onion 2.4 버전
