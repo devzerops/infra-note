@@ -3,6 +3,7 @@
 [ansible forum](https://forum.ansible.com/t/installation-procedure-of-latest-awx-version-23-0-0/992)
 
 
+![awx-guide](https://ansible.readthedocs.io/projects/awx-operator/en/stable/index.html)
 
 # Infra - Security Onion 
 
