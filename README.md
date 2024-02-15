@@ -2,6 +2,7 @@
 [awx 설치링크](https://computingforgeeks.com/how-to-install-ansible-awx-on-centos-7/?expand_article=1#google_vignette)
 ![ansible forum](https://forum.ansible.com/t/installation-procedure-of-latest-awx-version-23-0-0/992)
 ![web](https://support.websoft9.com/en/docs/helpdesk)
+![awx-repo](https://github.com/ansible/awx-operator/blob/devel/.helm/starter/README.md)
 
 ![awx-guide](https://ansible.readthedocs.io/projects/awx-operator/en/stable/index.html)
 
