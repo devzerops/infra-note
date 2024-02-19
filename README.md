@@ -1,10 +1,14 @@
 #
-[awx 설치링크](https://computingforgeeks.com/how-to-install-ansible-awx-on-centos-7/?expand_article=1#google_vignette)
-![ansible forum](https://forum.ansible.com/t/installation-procedure-of-latest-awx-version-23-0-0/992)
-![web](https://support.websoft9.com/en/docs/helpdesk)
-![awx-repo](https://github.com/ansible/awx-operator/blob/devel/.helm/starter/README.md)
+[awx 설치링크](https://computingforgeeks.com/how-to-install-ansible-awx-on-centos-7/?expand_article=1#google_vignette)  
+[ansible forum](https://forum.ansible.com/t/installation-procedure-of-latest-awx-version-23-0-0/992)  
+[web](https://support.websoft9.com/en/docs/helpdesk)  
+[awx-repo](https://github.com/ansible/awx-operator/blob/devel/.helm/starter/README.md)  
 
-![awx-guide](https://ansible.readthedocs.io/projects/awx-operator/en/stable/index.html)
+[awx-guide](https://ansible.readthedocs.io/projects/awx-operator/en/stable/index.html)  
+
+# 메모
+[NAS vs SAN](https://www.dknyou.com/blog/?q=YToyOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjtzOjQ6InBhZ2UiO2k6NDt9&bmode=view&idx=6123731&t=board)  
+[storage 종류](https://www.dknyou.com/blog/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=10474168&t=board)
 
 # Infra - Security Onion 
 
