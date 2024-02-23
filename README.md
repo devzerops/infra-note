@@ -4,7 +4,9 @@
 [web](https://support.websoft9.com/en/docs/helpdesk)  
 [awx-repo](https://github.com/ansible/awx-operator/blob/devel/.helm/starter/README.md)  
 
-[awx-guide](https://ansible.readthedocs.io/projects/awx-operator/en/stable/index.html)  
+[awx-guide](https://ansible.readthedocs.io/projects/awx-operator/en/stable/index.html)    
+
+[ansible-guide](https://docs.rockylinux.org/ko/books/learning_ansible/02-advanced/)
 
 # 메모
 [NAS vs SAN](https://www.dknyou.com/blog/?q=YToyOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjtzOjQ6InBhZ2UiO2k6NDt9&bmode=view&idx=6123731&t=board)  
