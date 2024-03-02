@@ -19,6 +19,7 @@
 2. keycloack
 3. argo
 4. nextcloud
+5. kubesphre
 
 # Infra - Security Onion 
 
