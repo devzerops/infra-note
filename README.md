@@ -9,8 +9,13 @@
 [ansible-guide](https://docs.rockylinux.org/ko/books/learning_ansible/02-advanced/)
 
 # 메모
-[NAS vs SAN](https://www.dknyou.com/blog/?q=YToyOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjtzOjQ6InBhZ2UiO2k6NDt9&bmode=view&idx=6123731&t=board)  
 [storage 종류](https://www.dknyou.com/blog/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=10474168&t=board)
+
+# opensource
+1. homepage
+2. keycloack
+3. argo
+4. nextcloud
 
 # Infra - Security Onion 
 
