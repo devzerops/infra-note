@@ -11,6 +11,8 @@
 # 메모
 [storage 종류](https://www.dknyou.com/blog/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=10474168&t=board)
 
+[zfs란?](https://admion.net/what-is-zfs/)
+
 # 책
 1. 예제로 배우는 Argo CD
 2.서비스 메시 마스터
